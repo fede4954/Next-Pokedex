@@ -1,10 +1,12 @@
 import ContainerBlock from '../components/ContainerBlock'
+import PokemonList from '../components/PokemonList'
 
 const Home = ({ pokemon }) => {
-  console.log(pokemon)
   return (
     <ContainerBlock title="Next.js Pokédex">
-      <h1 className="text-4xl mb-8 text-center">Next.js Pokédex</h1>
+      <h1 className="text-4xl mb-8 text-center font-semibold">Next.js Pokédex</h1>
+
+      <PokemonList pokemon={pokemon} />
     </ContainerBlock>
   )
 }

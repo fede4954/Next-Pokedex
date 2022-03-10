@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 const ContainerBlock = ({ title, children }) => {
     return (
-        <div className="bg-slate-500">
+        <div className="bg-gray-200">
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico" />
