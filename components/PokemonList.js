@@ -7,8 +7,10 @@ const PokemonList = ({ pokemon }) => {
         <ul>
             {pokemon.map((pokeman, index) => {
                 return <li key={index + Date.now()}>
-                    <Link href={`/pokemon?id=${index + 252}`} passHref>
-                        <PokemanCard pokeman={{ ...pokeman, number: index + 252 }} />
+                    <Link href={`/pokemon?id=${index + 252}`}>
+                        <a>
+                            <PokemanCard pokeman={{ ...pokeman, number: index + 252 }} />
+                        </a>
                     </Link>
                 </li>
             })}
