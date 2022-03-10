@@ -1,6 +1,7 @@
 import ContainerBlock from '../components/ContainerBlock'
 import PokemonList from '../components/PokemonList'
 
+
 const Home = ({ pokemon }) => {
   return (
     <ContainerBlock title="Next.js Pokédex">
@@ -13,6 +14,7 @@ const Home = ({ pokemon }) => {
 
 export default Home
 
+
 // By defining getStaticProps, Next knows its a static page. At build time it will
 // run this function, grab the data from the Pokémon API and then pass data to the
 // index page
@@ -23,6 +25,7 @@ export const getStaticProps = async () => {
     // Destructure results directly from the response
     const { results } = await res.json()
 
+
     const pokemon = results.map((result, index) => {
       return {
         ...result,
@@ -30,6 +33,7 @@ export const getStaticProps = async () => {
         image: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${(index + 252).toString()}.png`
       }
     })
+
 
     return {
       props: { pokemon }
